@@ -99,10 +99,11 @@ public class TaskStudent_Management_System {
             System.out.println("3. Search for a Student");
             System.out.println("4. Display All Students");
             System.out.println("5. Exit");
+            
 
             System.out.print("Enter your choice: ");
             int choice = sc.nextInt();
-            sc.nextLine();  // Consume the newline character
+            sc.nextLine();  
 
             switch (choice) {
                 case 1:
@@ -110,10 +111,10 @@ public class TaskStudent_Management_System {
                     String name = sc.nextLine();
                     System.out.print("Enter Roll number: ");
                     int rollno = sc.nextInt();
-                    sc.nextLine();  // Consume the newline character
+                    sc.nextLine();  
                     System.out.print("Enter Age: ");
                     int age = sc.nextInt();
-                    sc.nextLine();  // Consume the newline character
+                    sc.nextLine(); 
                     System.out.print("Enter Address: ");
                     String address = sc.nextLine();
                     System.out.print("Enter Gender: ");
@@ -138,6 +139,7 @@ public class TaskStudent_Management_System {
                     } else {
                         System.out.println("Student not found.");
                     }
+                    // end{code}
                     break;
                 case 3:
                     System.out.print("Enter search keyword: ");
