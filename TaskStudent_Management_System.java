@@ -99,11 +99,10 @@ public class TaskStudent_Management_System {
             System.out.println("3. Search for a Student");
             System.out.println("4. Display All Students");
             System.out.println("5. Exit");
-            
 
             System.out.print("Enter your choice: ");
             int choice = sc.nextInt();
-            sc.nextLine();  
+            sc.nextLine();  // Consume the newline character
 
             switch (choice) {
                 case 1:
@@ -139,7 +138,6 @@ public class TaskStudent_Management_System {
                     } else {
                         System.out.println("Student not found.");
                     }
-                    // end{code}
                     break;
                 case 3:
                     System.out.print("Enter search keyword: ");
