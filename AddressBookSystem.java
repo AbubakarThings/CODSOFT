@@ -57,7 +57,8 @@ class AddressBook {
     public List<Contact> searchContact(String keyword) {
         List<Contact> result = new ArrayList<>();
         for (Contact contact : contacts) {
-            if (contact.getName().contains(keyword) || contact.getPhoneNumber().contains(keyword) || contact.getEmailAddress().contains(keyword)) {
+            if (contact.getName().contains(keyword) || contact.getPhoneNumber().contains(keyword) 
+            || contact.getEmailAddress().contains(keyword) || contact.getCity().contains(keyword)) {
                 result.add(contact);
             }
         }
