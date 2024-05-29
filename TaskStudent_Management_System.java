@@ -100,13 +100,13 @@ public class TaskStudent_Management_System {
 
         while (true) {
             System.out.println("Student Management System Menu:");
-            System.out.println("1. Add a new student");
-            System.out.println("2. Remove a student");
-            System.out.println("3. Search for a student");
-            System.out.println("4. Display all students");
+            System.out.println("1. Add a New Student");
+            System.out.println("2. Remove a Student");
+            System.out.println("3. Search for a Student");
+            System.out.println("4. Display All Students");
             System.out.println("5. Exit");
 
-            System.out.print("Enter your choice: ");
+            System.out.print("Enter what you want to display: ");
             int choice = sc.nextInt();
             sc.nextLine();  
 
