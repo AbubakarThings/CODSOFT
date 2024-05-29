@@ -1,71 +1,61 @@
-
 import java.util.Scanner;
 import java.util.List;
 import java.util.ArrayList;
 
 class StudentClass {
-    
-    private String Name;
-    private Integer Rollno;
-    private Integer Age;
-    private String Address;
-private String Gender;
-private String Course;
-private String Grade;
+    private String name;
+    private Integer rollno;
+    private Integer age;
+    private String address;
+    private String gender;
+    private String course;
+    private String grade;
 
+    public StudentClass(String name, Integer rollno, Integer age, String address, String gender, String course, String grade) {
+        this.name = name;
+        this.rollno = rollno;
+        this.age = age;
+        this.address = address;
+        this.gender = gender;
+        this.course = course;
+        this.grade = grade;
+    }
 
-public StudentClass(String Name, Integer Rollno, Integer Age, 
-String Address, String Gender, String Course, String Grade){
+    public String getName() {
+        return name;
+    }
 
+    public Integer getRollno() {
+        return rollno;
+    }
 
-this.Name = Name;
-this.Rollno = Rollno;    
-this.Age = Age;
-this.Address = Address;
-this.Gender = Gender;
-this.Course = Course;
-this.Grade = Grade;
-}
+    public Integer getAge() {
+        return age;
+    }
 
+    public String getAddress() {
+        return address;
+    }
 
-public String getName(){
-return Name;
-}
+    public String getGender() {
+        return gender;
+    }
 
-public Integer getRollno(){
-return Rollno;
-}
+    public String getCourse() {
+        return course;
+    }
 
-public Integer Age(){
-return Age;
-}
-
-public String getAddress(){
-return Address;
-}
-
-public String getGender(){
-return Gender;
-}
-
-public String getCourse(){
-return Course;
-}
-
-public String getGrade(){
-return Gender;
-
-}
+    public String getGrade() {
+        return grade;
+    }
 
     @Override
     public String toString() {
-        return "Name: " + Name + ", Roll_No: " + Rollno + ", Age: " 
-        + Age + ",Address" + Address + ",Gender"  + Gender + ",Course" + Course + ",Grade" + Grade;
+        return "Name: " + name + ", Roll_No: " + rollno + ", Age: " + age + ", Address: " + address + ", Gender: " + gender + ", Course: " + course + ", Grade: " + grade;
     }
 }
 
 class StudentManagementSystem {
-    private static final char[] StudentClass = null;
     private List<StudentClass> students = new ArrayList<>();
 
     public void addStudent(StudentClass studentClass) {
@@ -87,11 +77,11 @@ class StudentManagementSystem {
     }
 
     public void displayAllStudents() {
-        for (@SuppressWarnings("unused") StudentClass studentClass : students) {
-            System.out.println(StudentClass);
+        for (StudentClass studentClass : students) {
+            System.out.println(studentClass);
         }
     }
-}  
+}
 
 public class TaskStudent_Management_System {
     public static void main(String[] args) {
@@ -106,9 +96,9 @@ public class TaskStudent_Management_System {
             System.out.println("4. Display All Students");
             System.out.println("5. Exit");
 
-            System.out.print("Enter what you want to display: ");
+            System.out.print("Enter your choice: ");
             int choice = sc.nextInt();
-            sc.nextLine();  
+            sc.nextLine();  // Consume the newline character
 
             switch (choice) {
                 case 1:
@@ -119,7 +109,8 @@ public class TaskStudent_Management_System {
                     sc.nextLine();  // Consume the newline character
                     System.out.print("Enter Age: ");
                     int age = sc.nextInt();
-                    System.out.println("Enter Address");
+                    sc.nextLine();  // Consume the newline character
+                    System.out.print("Enter Address: ");
                     String address = sc.nextLine();
                     System.out.print("Enter Gender: ");
                     String gender = sc.nextLine();
