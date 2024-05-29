@@ -77,8 +77,12 @@ class StudentManagementSystem {
     }
 
     public void displayAllStudents() {
-        for (StudentClass studentClass : students) {
-            System.out.println(studentClass);
+        if (students.isEmpty()) {
+            System.out.println("No student records found in the database.");
+        } else {
+            for (StudentClass studentClass : students) {
+                System.out.println(studentClass);
+            }
         }
     }
 }
