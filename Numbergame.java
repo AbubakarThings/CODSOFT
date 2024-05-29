@@ -1,4 +1,3 @@
-
 import java.util.Random;
 import java.util.Scanner;
 
@@ -49,9 +48,9 @@ public class Numbergame {
                 System.out.println("Sorry, you've used all your attempts. The correct number was: " + targetNumber);
             }
 
-            System.out.print("Do you want to play again? (yes/no): ");
+            System.out.print("Do you want to play again? (y/n): ");
             String playAgainResponse = scanner.next().toLowerCase();
-            if (!playAgainResponse.equals("yes")) {
+            if (!playAgainResponse.equals("y")) {
                 playAgain = false;
             }
 
