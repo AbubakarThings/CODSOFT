@@ -34,6 +34,7 @@ class BankAccount {
 
 public class ATMInterface {
     public static void main(String[] args) {
+        @SuppressWarnings("resource")
         Scanner sc = new Scanner(System.in);
         double initialBalance = 2000.0; 
         BankAccount ba = new BankAccount(initialBalance);
